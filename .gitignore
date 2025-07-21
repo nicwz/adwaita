@@ -30,3 +30,4 @@ build/
 linux/
 example/linux/
 credentials.json
+example/pubspec.lock
