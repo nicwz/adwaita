@@ -41,160 +41,160 @@ class AdwaitaThemeData {
         fontSize: 26,
         color: color,
         fontWeight: FontWeight.bold,
+        fontFamily: 'AdwaitaSans',
       ),
       displayMedium: TextStyle(
         fontSize: 21,
         color: color,
         fontWeight: FontWeight.bold,
+        fontFamily: 'AdwaitaSans',
       ),
       displaySmall: TextStyle(
         fontSize: 20,
         color: color,
         fontWeight: FontWeight.bold,
+        fontFamily: 'AdwaitaSans',
       ),
       headlineMedium: TextStyle(
         fontSize: 17,
         color: color,
         fontWeight: FontWeight.bold,
+        fontFamily: 'AdwaitaSans',
       ),
       headlineSmall: TextStyle(
         fontSize: 15,
         color: color,
         fontWeight: FontWeight.bold,
+        fontFamily: 'AdwaitaSans',
       ),
       titleLarge: TextStyle(
         fontSize: 13,
         color: color,
         fontWeight: FontWeight.w600,
+        fontFamily: 'AdwaitaSans',
       ),
       bodyLarge: TextStyle(
         fontSize: 15,
         color: color,
+        fontFamily: 'AdwaitaSans',
       ),
       bodySmall: TextStyle(
         fontSize: 13,
         color: color,
         fontWeight: FontWeight.w400,
+        fontFamily: 'AdwaitaSans',
       ),
     );
   }
 
   /// A default light theme.
   static ThemeData light({String? fontFamily}) => ThemeData(
-        fontFamily: fontFamily,
-        tabBarTheme: TabBarThemeData(labelColor: _lightColorScheme.onSurface),
-        brightness: Brightness.light,
-        splashFactory: NoSplash.splashFactory,
-        primaryColor: _lightColorScheme.primary,
-        canvasColor: _lightColorScheme.background,
-        scaffoldBackgroundColor: _lightColorScheme.background,
-        cardColor: _lightColorScheme.surface,
-        dividerTheme: DividerThemeData(
-          color: _lightColorScheme.onSurface.withOpacity(0.12),
-        ),
-        dialogBackgroundColor: _lightColorScheme.background,
-        dialogTheme: DialogThemeData(
-          backgroundColor: _lightColorScheme.background,
-          shape: getDialogShape(Colors.black),
-        ),
-        textTheme: getTextTheme(),
-        indicatorColor: _lightColorScheme.secondary,
-        applyElevationOverlayColor: false,
-        buttonTheme: _buttonThemeData,
-        elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.light),
-        outlinedButtonTheme: _outlinedButtonThemeData,
-        textButtonTheme: _textButtonThemeData,
-        switchTheme: _switchStyleLight,
-        checkboxTheme: _checkStyleLight,
-        radioTheme: _radioStyleLight,
-        appBarTheme: _appBarLightTheme,
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: AdwaitaColors.blueAccent,
-        ),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          selectedItemColor: _lightColorScheme.primary,
-          unselectedItemColor: AdwaitaColors.dark3,
-        ),
-        inputDecorationTheme: InputDecorationTheme(
-          filled: true,
-          fillColor: AdwaitaColors.button,
-          enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(8)),
-            borderSide: BorderSide(color: Colors.transparent),
-          ),
-          focusedBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(8),
-            ),
-            borderSide: BorderSide(
-              color: AdwaitaColors.blueAccent,
-            ),
-          ),
-        ),
-        bottomAppBarTheme: BottomAppBarThemeData(color: _lightColorScheme.surface),
-        colorScheme: _lightColorScheme
-            .copyWith(
-              background: _lightColorScheme.background,
-            )
-            .copyWith(error: _lightColorScheme.error),
-      );
+    fontFamily: fontFamily,
+    tabBarTheme: TabBarThemeData(labelColor: _lightColorScheme.onSurface),
+    brightness: Brightness.light,
+    splashFactory: NoSplash.splashFactory,
+    primaryColor: _lightColorScheme.primary,
+    canvasColor: _lightColorScheme.background,
+    scaffoldBackgroundColor: _lightColorScheme.background,
+    cardColor: _lightColorScheme.surface,
+    dividerTheme: DividerThemeData(
+      color: _lightColorScheme.onSurface.withOpacity(0.12),
+    ),
+    dialogBackgroundColor: _lightColorScheme.background,
+    dialogTheme: DialogThemeData(
+      backgroundColor: _lightColorScheme.background,
+      shape: getDialogShape(Colors.black),
+    ),
+    textTheme: getTextTheme(),
+    indicatorColor: _lightColorScheme.secondary,
+    applyElevationOverlayColor: false,
+    buttonTheme: _buttonThemeData,
+    elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.light),
+    outlinedButtonTheme: _outlinedButtonThemeData,
+    textButtonTheme: _textButtonThemeData,
+    switchTheme: _switchStyleLight,
+    checkboxTheme: _checkStyleLight,
+    radioTheme: _radioStyleLight,
+    appBarTheme: _appBarLightTheme,
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: AdwaitaColors.blueAccent,
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: _lightColorScheme.primary,
+      unselectedItemColor: AdwaitaColors.dark3,
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: AdwaitaColors.button,
+      enabledBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(8)),
+        borderSide: BorderSide(color: Colors.transparent),
+      ),
+      focusedBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(8)),
+        borderSide: BorderSide(color: AdwaitaColors.blueAccent),
+      ),
+    ),
+    bottomAppBarTheme: BottomAppBarTheme(color: _lightColorScheme.surface),
+    colorScheme: _lightColorScheme
+        .copyWith(background: _lightColorScheme.background)
+        .copyWith(error: _lightColorScheme.error),
+  );
 
   /// A default dark theme.
   static ThemeData dark({String? fontFamily}) => ThemeData(
-        fontFamily: fontFamily,
-        tabBarTheme: TabBarThemeData(labelColor: _darkColorScheme.onBackground),
-        brightness: Brightness.dark,
-        splashFactory: NoSplash.splashFactory,
-        primaryColor: _darkColorScheme.primary,
-        canvasColor: _darkColorScheme.background,
-        scaffoldBackgroundColor: _darkColorScheme.background,
-        cardColor: _darkColorScheme.surface,
-        dividerTheme: DividerThemeData(
-          color: _darkColorScheme.onSurface.withOpacity(0.12),
-        ),
-        dialogBackgroundColor: _darkColorScheme.background,
-        dialogTheme: DialogThemeData(
-          backgroundColor: _darkColorScheme.background,
-          shape: getDialogShape(),
-        ),
-        textTheme: getTextTheme(Brightness.dark),
-        indicatorColor: _darkColorScheme.secondary,
-        applyElevationOverlayColor: true,
-        buttonTheme: _buttonThemeData,
-        textButtonTheme: _darkTextButtonThemeData,
-        elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.dark),
-        outlinedButtonTheme: _darkOutlinedButtonThemeData,
-        switchTheme: _switchStyleDark,
-        checkboxTheme: _checkStyleDark,
-        radioTheme: _radioStyleDark,
-        primaryColorDark: AdwaitaColors.blueAccent,
-        appBarTheme: _appBarDarkTheme,
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: AdwaitaColors.blueAccent,
-        ),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          selectedItemColor: _darkColorScheme.primary,
-          unselectedItemColor: AdwaitaColors.warmGrey.shade300,
-        ),
-        inputDecorationTheme: InputDecorationTheme(
-          filled: true,
-          fillColor: AdwaitaColors.darkButton,
-          enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(8)),
-            borderSide: BorderSide(color: Colors.transparent),
-          ),
-          focusedBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(8),
-            ),
-            borderSide: BorderSide(color: AdwaitaColors.blueAccent),
-          ),
-        ),
-        bottomAppBarTheme: BottomAppBarThemeData(color: _darkColorScheme.surface),
-        colorScheme: _darkColorScheme
-            .copyWith(background: _darkColorScheme.background)
-            .copyWith(error: _darkColorScheme.error),
-      );
+    fontFamily: fontFamily,
+    tabBarTheme: TabBarThemeData(labelColor: _darkColorScheme.onBackground),
+    brightness: Brightness.dark,
+    splashFactory: NoSplash.splashFactory,
+    primaryColor: _darkColorScheme.primary,
+    canvasColor: _darkColorScheme.background,
+    scaffoldBackgroundColor: _darkColorScheme.background,
+    cardColor: _darkColorScheme.surface,
+    dividerTheme: DividerThemeData(
+      color: _darkColorScheme.onSurface.withOpacity(0.12),
+    ),
+    dialogBackgroundColor: _darkColorScheme.background,
+    dialogTheme: DialogThemeData(
+      backgroundColor: _darkColorScheme.background,
+      shape: getDialogShape(),
+    ),
+    textTheme: getTextTheme(Brightness.dark),
+    indicatorColor: _darkColorScheme.secondary,
+    applyElevationOverlayColor: true,
+    buttonTheme: _buttonThemeData,
+    textButtonTheme: _darkTextButtonThemeData,
+    elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.dark),
+    outlinedButtonTheme: _darkOutlinedButtonThemeData,
+    switchTheme: _switchStyleDark,
+    checkboxTheme: _checkStyleDark,
+    radioTheme: _radioStyleDark,
+    primaryColorDark: AdwaitaColors.blueAccent,
+    appBarTheme: _appBarDarkTheme,
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: AdwaitaColors.blueAccent,
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: _darkColorScheme.primary,
+      unselectedItemColor: AdwaitaColors.warmGrey.shade300,
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: AdwaitaColors.darkButton,
+      enabledBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(8)),
+        borderSide: BorderSide(color: Colors.transparent),
+      ),
+      focusedBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(8)),
+        borderSide: BorderSide(color: AdwaitaColors.blueAccent),
+      ),
+    ),
+    bottomAppBarTheme: BottomAppBarTheme(color: _darkColorScheme.surface),
+    colorScheme: _darkColorScheme
+        .copyWith(background: _darkColorScheme.background)
+        .copyWith(error: _darkColorScheme.error),
+  );
 
   // Special casing some widgets to get the desired Adwaita look
   // Buttons
@@ -220,9 +220,7 @@ class AdwaitaThemeData {
   );
 
   static final _buttonThemeData = ButtonThemeData(
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(4),
-    ),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
   );
 
   static final _outlinedButtonThemeData = OutlinedButtonThemeData(
@@ -279,7 +277,7 @@ class AdwaitaThemeData {
     return ElevatedButtonThemeData(style: _darkCommonButtonStyle);
   }
 
-// Switches
+  // Switches
   static Color _getSwitchThumbColorDark(Set<MaterialState> states) {
     if (states.contains(MaterialState.disabled)) {
       return AdwaitaColors.dark2;
@@ -338,7 +336,7 @@ class AdwaitaThemeData {
     trackColor: MaterialStateProperty.resolveWith(_getSwitchTrackColorLight),
   );
 
-// Checks
+  // Checks
   static Color _getCheckFillColorDark(Set<MaterialState> states) {
     if (!states.contains(MaterialState.disabled)) {
       if (states.contains(MaterialState.selected)) {
@@ -357,9 +355,7 @@ class AdwaitaThemeData {
   }
 
   static final _checkStyleDark = CheckboxThemeData(
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(2),
-    ),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2)),
     fillColor: MaterialStateProperty.resolveWith(_getCheckFillColorDark),
     checkColor: MaterialStateProperty.resolveWith(_getCheckColorDark),
   );
@@ -382,14 +378,12 @@ class AdwaitaThemeData {
   }
 
   static final _checkStyleLight = CheckboxThemeData(
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(2),
-    ),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2)),
     fillColor: MaterialStateProperty.resolveWith(_getCheckFillColorLight),
     checkColor: MaterialStateProperty.resolveWith(_getCheckColorLight),
   );
 
-// Radios
+  // Radios
   static final _radioStyleDark = RadioThemeData(
     fillColor: MaterialStateProperty.resolveWith(_getCheckFillColorDark),
   );
