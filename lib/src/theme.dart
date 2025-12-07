@@ -131,7 +131,7 @@ class AdwaitaThemeData {
             ),
           ),
         ),
-        bottomAppBarTheme: BottomAppBarTheme(color: _lightColorScheme.surface),
+        bottomAppBarTheme: BottomAppBarThemeData(color: _lightColorScheme.surface),
         colorScheme: _lightColorScheme
             .copyWith(
               background: _lightColorScheme.background,
@@ -190,7 +190,7 @@ class AdwaitaThemeData {
             borderSide: BorderSide(color: AdwaitaColors.blueAccent),
           ),
         ),
-        bottomAppBarTheme: BottomAppBarTheme(color: _darkColorScheme.surface),
+        bottomAppBarTheme: BottomAppBarThemeData(color: _darkColorScheme.surface),
         colorScheme: _darkColorScheme
             .copyWith(background: _darkColorScheme.background)
             .copyWith(error: _darkColorScheme.error),
