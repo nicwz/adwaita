@@ -484,79 +484,94 @@ class AdwaitaThemeData {
     return baseTheme.apply(fontFamily: fontFamily).copyWith(
           displayLarge: baseTheme.displayLarge?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           displayMedium: baseTheme.displayMedium?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           displaySmall: baseTheme.displaySmall?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           headlineLarge: baseTheme.headlineLarge?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           headlineMedium: baseTheme.headlineMedium?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           headlineSmall: baseTheme.headlineSmall?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           titleLarge: baseTheme.titleLarge?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           titleMedium: baseTheme.titleMedium?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           titleSmall: baseTheme.titleSmall?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           bodyLarge: baseTheme.bodyLarge?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           bodyMedium: baseTheme.bodyMedium?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           bodySmall: baseTheme.bodySmall?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           labelLarge: baseTheme.labelLarge?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           labelMedium: baseTheme.labelMedium?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
           labelSmall: baseTheme.labelSmall?.copyWith(
                 fontFamily: fontFamily,
-                fontFeatures: fontFeatures,
+                fontFeatures: _interFontFeatures,
               ) ??
-              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+              TextStyle(
+                  fontFamily: fontFamily, fontFeatures: _interFontFeatures),
         );
   }
 }
