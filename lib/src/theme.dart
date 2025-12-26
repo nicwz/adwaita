@@ -51,149 +51,60 @@ class AdwaitaThemeData {
         color: color,
         fontWeight: FontWeight.bold,
         fontFamily: 'Inter',
-<<<<<<< HEAD
         fontFeatures: _interFontFeatures,
-=======
-        fontFeatures: const [
-          FontFeature('dlig'),
-          FontFeature('ss01'),
-          FontFeature('ss02'),
-          FontFeature('tnum'),
-          FontFeature('frac'),
-          FontFeature('zero'),
-        ],
->>>>>>> 629a99e3e7988cb28613216d10c57ebf92d40701
       ),
       displayMedium: TextStyle(
         fontSize: 21,
         color: color,
         fontWeight: FontWeight.bold,
         fontFamily: 'Inter',
-<<<<<<< HEAD
         fontFeatures: _interFontFeatures,
-=======
-        fontFeatures: const [
-          FontFeature('dlig'),
-          FontFeature('ss01'),
-          FontFeature('ss02'),
-          FontFeature('tnum'),
-          FontFeature('frac'),
-          FontFeature('zero'),
-        ],
->>>>>>> 629a99e3e7988cb28613216d10c57ebf92d40701
       ),
       displaySmall: TextStyle(
         fontSize: 20,
         color: color,
         fontWeight: FontWeight.bold,
         fontFamily: 'Inter',
-<<<<<<< HEAD
         fontFeatures: _interFontFeatures,
-=======
-        fontFeatures: const [
-          FontFeature('dlig'),
-          FontFeature('ss01'),
-          FontFeature('ss02'),
-          FontFeature('tnum'),
-          FontFeature('frac'),
-          FontFeature('zero'),
-        ],
->>>>>>> 629a99e3e7988cb28613216d10c57ebf92d40701
       ),
       headlineMedium: TextStyle(
         fontSize: 17,
         color: color,
         fontWeight: FontWeight.bold,
         fontFamily: 'Inter',
-<<<<<<< HEAD
         fontFeatures: _interFontFeatures,
-=======
-        fontFeatures: const [
-          FontFeature('dlig'),
-          FontFeature('ss01'),
-          FontFeature('ss02'),
-          FontFeature('tnum'),
-          FontFeature('frac'),
-          FontFeature('zero'),
-        ],
->>>>>>> 629a99e3e7988cb28613216d10c57ebf92d40701
       ),
       headlineSmall: TextStyle(
         fontSize: 15,
         color: color,
         fontWeight: FontWeight.bold,
         fontFamily: 'Inter',
-<<<<<<< HEAD
         fontFeatures: _interFontFeatures,
-=======
-        fontFeatures: const [
-          FontFeature('dlig'),
-          FontFeature('ss01'),
-          FontFeature('ss02'),
-          FontFeature('tnum'),
-          FontFeature('frac'),
-          FontFeature('zero'),
-        ],
->>>>>>> 629a99e3e7988cb28613216d10c57ebf92d40701
       ),
       titleLarge: TextStyle(
         fontSize: 13,
         color: color,
         fontWeight: FontWeight.w600,
         fontFamily: 'Inter',
-<<<<<<< HEAD
         fontFeatures: _interFontFeatures,
-=======
-        fontFeatures: const [
-          FontFeature('dlig'),
-          FontFeature('ss01'),
-          FontFeature('ss02'),
-          FontFeature('tnum'),
-          FontFeature('frac'),
-          FontFeature('zero'),
-        ],
->>>>>>> 629a99e3e7988cb28613216d10c57ebf92d40701
       ),
       bodyLarge: TextStyle(
         fontSize: 15,
         color: color,
         fontFamily: 'Inter',
-<<<<<<< HEAD
         fontFeatures: _interFontFeatures,
-=======
-        fontFeatures: const [
-          FontFeature('dlig'),
-          FontFeature('ss01'),
-          FontFeature('ss02'),
-          FontFeature('tnum'),
-          FontFeature('frac'),
-          FontFeature('zero'),
-        ],
->>>>>>> 629a99e3e7988cb28613216d10c57ebf92d40701
       ),
       bodySmall: TextStyle(
         fontSize: 13,
         color: color,
         fontWeight: FontWeight.w400,
         fontFamily: 'Inter',
-<<<<<<< HEAD
         fontFeatures: _interFontFeatures,
-=======
-        fontFeatures: const [
-          FontFeature('dlig'),
-          FontFeature('ss01'),
-          FontFeature('ss02'),
-          FontFeature('tnum'),
-          FontFeature('frac'),
-          FontFeature('zero'),
-        ],
->>>>>>> 629a99e3e7988cb28613216d10c57ebf92d40701
       ),
     );
   }
 
   /// A default light theme.
-<<<<<<< HEAD
   static ThemeData light({String? fontFamily}) {
     final base = ThemeData(
       fontFamily: fontFamily,
@@ -350,115 +261,6 @@ class AdwaitaThemeData {
       typography: overrides,
     );
   }
-=======
-  static ThemeData light({String? fontFamily}) => ThemeData(
-    fontFamily: fontFamily,
-    tabBarTheme: TabBarThemeData(labelColor: _lightColorScheme.onSurface),
-    brightness: Brightness.light,
-    splashFactory: NoSplash.splashFactory,
-    primaryColor: _lightColorScheme.primary,
-    canvasColor: _lightColorScheme.background,
-    scaffoldBackgroundColor: _lightColorScheme.background,
-    cardColor: _lightColorScheme.surface,
-    dividerTheme: DividerThemeData(
-      color: _lightColorScheme.onSurface.withOpacity(0.12),
-    ),
-    dialogBackgroundColor: _lightColorScheme.background,
-    dialogTheme: DialogThemeData(
-      backgroundColor: _lightColorScheme.background,
-      shape: getDialogShape(Colors.black),
-    ),
-    textTheme: getTextTheme(),
-    indicatorColor: _lightColorScheme.secondary,
-    applyElevationOverlayColor: false,
-    buttonTheme: _buttonThemeData,
-    elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.light),
-    outlinedButtonTheme: _outlinedButtonThemeData,
-    textButtonTheme: _textButtonThemeData,
-    switchTheme: _switchStyleLight,
-    checkboxTheme: _checkStyleLight,
-    radioTheme: _radioStyleLight,
-    appBarTheme: _appBarLightTheme,
-    floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: AdwaitaColors.blueAccent,
-    ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      selectedItemColor: _lightColorScheme.primary,
-      unselectedItemColor: AdwaitaColors.dark3,
-    ),
-    inputDecorationTheme: InputDecorationTheme(
-      filled: true,
-      fillColor: AdwaitaColors.button,
-      enabledBorder: const OutlineInputBorder(
-        borderRadius: BorderRadius.all(Radius.circular(8)),
-        borderSide: BorderSide(color: Colors.transparent),
-      ),
-      focusedBorder: const OutlineInputBorder(
-        borderRadius: BorderRadius.all(Radius.circular(8)),
-        borderSide: BorderSide(color: AdwaitaColors.blueAccent),
-      ),
-    ),
-    bottomAppBarTheme: BottomAppBarThemeData(color: _lightColorScheme.surface),
-    colorScheme: _lightColorScheme
-        .copyWith(background: _lightColorScheme.background)
-        .copyWith(error: _lightColorScheme.error),
-  );
-
-  /// A default dark theme.
-  static ThemeData dark({String? fontFamily}) => ThemeData(
-    fontFamily: fontFamily,
-    tabBarTheme: TabBarThemeData(labelColor: _darkColorScheme.onBackground),
-    brightness: Brightness.dark,
-    splashFactory: NoSplash.splashFactory,
-    primaryColor: _darkColorScheme.primary,
-    canvasColor: _darkColorScheme.background,
-    scaffoldBackgroundColor: _darkColorScheme.background,
-    cardColor: _darkColorScheme.surface,
-    dividerTheme: DividerThemeData(
-      color: _darkColorScheme.onSurface.withOpacity(0.12),
-    ),
-    dialogBackgroundColor: _darkColorScheme.background,
-    dialogTheme: DialogThemeData(
-      backgroundColor: _darkColorScheme.background,
-      shape: getDialogShape(),
-    ),
-    textTheme: getTextTheme(Brightness.dark),
-    indicatorColor: _darkColorScheme.secondary,
-    applyElevationOverlayColor: true,
-    buttonTheme: _buttonThemeData,
-    textButtonTheme: _darkTextButtonThemeData,
-    elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.dark),
-    outlinedButtonTheme: _darkOutlinedButtonThemeData,
-    switchTheme: _switchStyleDark,
-    checkboxTheme: _checkStyleDark,
-    radioTheme: _radioStyleDark,
-    primaryColorDark: AdwaitaColors.blueAccent,
-    appBarTheme: _appBarDarkTheme,
-    floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: AdwaitaColors.blueAccent,
-    ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      selectedItemColor: _darkColorScheme.primary,
-      unselectedItemColor: AdwaitaColors.warmGrey.shade300,
-    ),
-    inputDecorationTheme: InputDecorationTheme(
-      filled: true,
-      fillColor: AdwaitaColors.darkButton,
-      enabledBorder: const OutlineInputBorder(
-        borderRadius: BorderRadius.all(Radius.circular(8)),
-        borderSide: BorderSide(color: Colors.transparent),
-      ),
-      focusedBorder: const OutlineInputBorder(
-        borderRadius: BorderRadius.all(Radius.circular(8)),
-        borderSide: BorderSide(color: AdwaitaColors.blueAccent),
-      ),
-    ),
-    bottomAppBarTheme: BottomAppBarThemeData(color: _darkColorScheme.surface),
-    colorScheme: _darkColorScheme
-        .copyWith(background: _darkColorScheme.background)
-        .copyWith(error: _darkColorScheme.error),
-  );
->>>>>>> 629a99e3e7988cb28613216d10c57ebf92d40701
 
   // Special casing some widgets to get the desired Adwaita look
   // Buttons
