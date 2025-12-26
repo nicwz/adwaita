@@ -7,6 +7,15 @@ import 'package:flutter/services.dart' show SystemUiOverlayStyle;
 class AdwaitaThemeData {
   const AdwaitaThemeData._();
 
+  static const List<FontFeature> _interFontFeatures = [
+    //FontFeature('dlig'),
+    FontFeature('ss01'),
+    FontFeature('ss02'),
+    FontFeature('tnum'),
+    //FontFeature('frac'),
+    FontFeature('zero'),
+  ];
+
   static final _lightColorScheme = ColorScheme.fromSwatch(
     // NOTE(robert-ancell): Light shades from 'Tint' on website, dark shades
     // calculated.
@@ -41,160 +50,217 @@ class AdwaitaThemeData {
         fontSize: 26,
         color: color,
         fontWeight: FontWeight.bold,
+        fontFamily: 'Inter',
+        fontFeatures: _interFontFeatures,
       ),
       displayMedium: TextStyle(
         fontSize: 21,
         color: color,
         fontWeight: FontWeight.bold,
+        fontFamily: 'Inter',
+        fontFeatures: _interFontFeatures,
       ),
       displaySmall: TextStyle(
         fontSize: 20,
         color: color,
         fontWeight: FontWeight.bold,
+        fontFamily: 'Inter',
+        fontFeatures: _interFontFeatures,
       ),
       headlineMedium: TextStyle(
         fontSize: 17,
         color: color,
         fontWeight: FontWeight.bold,
+        fontFamily: 'Inter',
+        fontFeatures: _interFontFeatures,
       ),
       headlineSmall: TextStyle(
         fontSize: 15,
         color: color,
         fontWeight: FontWeight.bold,
+        fontFamily: 'Inter',
+        fontFeatures: _interFontFeatures,
       ),
       titleLarge: TextStyle(
         fontSize: 13,
         color: color,
         fontWeight: FontWeight.w600,
+        fontFamily: 'Inter',
+        fontFeatures: _interFontFeatures,
       ),
       bodyLarge: TextStyle(
         fontSize: 15,
         color: color,
+        fontFamily: 'Inter',
+        fontFeatures: _interFontFeatures,
       ),
       bodySmall: TextStyle(
         fontSize: 13,
         color: color,
         fontWeight: FontWeight.w400,
+        fontFamily: 'Inter',
+        fontFeatures: _interFontFeatures,
       ),
     );
   }
 
   /// A default light theme.
-  static ThemeData light({String? fontFamily}) => ThemeData(
-        fontFamily: fontFamily,
-        tabBarTheme: TabBarThemeData(labelColor: _lightColorScheme.onSurface),
-        brightness: Brightness.light,
-        splashFactory: NoSplash.splashFactory,
-        primaryColor: _lightColorScheme.primary,
-        canvasColor: _lightColorScheme.background,
-        scaffoldBackgroundColor: _lightColorScheme.background,
-        cardColor: _lightColorScheme.surface,
-        dividerTheme: DividerThemeData(
-          color: _lightColorScheme.onSurface.withOpacity(0.12),
+  static ThemeData light({String? fontFamily}) {
+    final base = ThemeData(
+      fontFamily: fontFamily,
+      tabBarTheme: TabBarThemeData(labelColor: _lightColorScheme.onSurface),
+      brightness: Brightness.light,
+      splashFactory: NoSplash.splashFactory,
+      primaryColor: _lightColorScheme.primary,
+      canvasColor: _lightColorScheme.background,
+      scaffoldBackgroundColor: _lightColorScheme.background,
+      cardColor: _lightColorScheme.surface,
+      dividerTheme: DividerThemeData(
+        color: _lightColorScheme.onSurface.withOpacity(0.12),
+      ),
+      dialogBackgroundColor: _lightColorScheme.background,
+      dialogTheme: DialogThemeData(
+        backgroundColor: _lightColorScheme.background,
+        shape: getDialogShape(Colors.black),
+      ),
+      textTheme: getTextTheme(),
+      indicatorColor: _lightColorScheme.secondary,
+      applyElevationOverlayColor: false,
+      buttonTheme: _buttonThemeData,
+      elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.light),
+      outlinedButtonTheme: _outlinedButtonThemeData,
+      textButtonTheme: _textButtonThemeData,
+      switchTheme: _switchStyleLight,
+      checkboxTheme: _checkStyleLight,
+      radioTheme: _radioStyleLight,
+      appBarTheme: _appBarLightTheme,
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: AdwaitaColors.blueAccent,
+      ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        selectedItemColor: _lightColorScheme.primary,
+        unselectedItemColor: AdwaitaColors.dark3,
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: AdwaitaColors.button,
+        enabledBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+          borderSide: BorderSide(color: Colors.transparent),
         ),
-        dialogBackgroundColor: _lightColorScheme.background,
-        dialogTheme: DialogThemeData(
-          backgroundColor: _lightColorScheme.background,
-          shape: getDialogShape(Colors.black),
+        focusedBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+          borderSide: BorderSide(color: AdwaitaColors.blueAccent),
         ),
-        textTheme: getTextTheme(),
-        indicatorColor: _lightColorScheme.secondary,
-        applyElevationOverlayColor: false,
-        buttonTheme: _buttonThemeData,
-        elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.light),
-        outlinedButtonTheme: _outlinedButtonThemeData,
-        textButtonTheme: _textButtonThemeData,
-        switchTheme: _switchStyleLight,
-        checkboxTheme: _checkStyleLight,
-        radioTheme: _radioStyleLight,
-        appBarTheme: _appBarLightTheme,
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: AdwaitaColors.blueAccent,
-        ),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          selectedItemColor: _lightColorScheme.primary,
-          unselectedItemColor: AdwaitaColors.dark3,
-        ),
-        inputDecorationTheme: InputDecorationTheme(
-          filled: true,
-          fillColor: AdwaitaColors.button,
-          enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(8)),
-            borderSide: BorderSide(color: Colors.transparent),
-          ),
-          focusedBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(8),
-            ),
-            borderSide: BorderSide(
-              color: AdwaitaColors.blueAccent,
-            ),
-          ),
-        ),
-        bottomAppBarTheme: BottomAppBarTheme(color: _lightColorScheme.surface),
-        colorScheme: _lightColorScheme
-            .copyWith(
-              background: _lightColorScheme.background,
-            )
-            .copyWith(error: _lightColorScheme.error),
-      );
+      ),
+      bottomAppBarTheme:
+          BottomAppBarThemeData(color: _lightColorScheme.surface),
+      colorScheme: _lightColorScheme
+          .copyWith(background: _lightColorScheme.background)
+          .copyWith(error: _lightColorScheme.error),
+    );
+
+    final overrides = Typography.material2021().copyWith(
+      englishLike: _applyFontFeaturesToTextTheme(
+        Typography.material2021().englishLike,
+        'Inter',
+        _interFontFeatures,
+      ),
+      dense: _applyFontFeaturesToTextTheme(
+        Typography.material2021().dense,
+        'Inter',
+        _interFontFeatures,
+      ),
+      tall: _applyFontFeaturesToTextTheme(
+        Typography.material2021().tall,
+        'Inter',
+        _interFontFeatures,
+      ),
+    );
+
+    return base.copyWith(
+      typography: overrides,
+    );
+  }
 
   /// A default dark theme.
-  static ThemeData dark({String? fontFamily}) => ThemeData(
-        fontFamily: fontFamily,
-        tabBarTheme: TabBarThemeData(labelColor: _darkColorScheme.onBackground),
-        brightness: Brightness.dark,
-        splashFactory: NoSplash.splashFactory,
-        primaryColor: _darkColorScheme.primary,
-        canvasColor: _darkColorScheme.background,
-        scaffoldBackgroundColor: _darkColorScheme.background,
-        cardColor: _darkColorScheme.surface,
-        dividerTheme: DividerThemeData(
-          color: _darkColorScheme.onSurface.withOpacity(0.12),
+  static ThemeData dark({String? fontFamily}) {
+    final base = ThemeData(
+      fontFamily: fontFamily,
+      tabBarTheme: TabBarThemeData(labelColor: _darkColorScheme.onBackground),
+      brightness: Brightness.dark,
+      splashFactory: NoSplash.splashFactory,
+      primaryColor: _darkColorScheme.primary,
+      canvasColor: _darkColorScheme.background,
+      scaffoldBackgroundColor: _darkColorScheme.background,
+      cardColor: _darkColorScheme.surface,
+      dividerTheme: DividerThemeData(
+        color: _darkColorScheme.onSurface.withOpacity(0.12),
+      ),
+      dialogBackgroundColor: _darkColorScheme.background,
+      dialogTheme: DialogThemeData(
+        backgroundColor: _darkColorScheme.background,
+        shape: getDialogShape(),
+      ),
+      textTheme: getTextTheme(Brightness.dark),
+      indicatorColor: _darkColorScheme.secondary,
+      applyElevationOverlayColor: true,
+      buttonTheme: _buttonThemeData,
+      textButtonTheme: _darkTextButtonThemeData,
+      elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.dark),
+      outlinedButtonTheme: _darkOutlinedButtonThemeData,
+      switchTheme: _switchStyleDark,
+      checkboxTheme: _checkStyleDark,
+      radioTheme: _radioStyleDark,
+      primaryColorDark: AdwaitaColors.blueAccent,
+      appBarTheme: _appBarDarkTheme,
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: AdwaitaColors.blueAccent,
+      ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        selectedItemColor: _darkColorScheme.primary,
+        unselectedItemColor: AdwaitaColors.warmGrey.shade300,
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: AdwaitaColors.darkButton,
+        enabledBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+          borderSide: BorderSide(color: Colors.transparent),
         ),
-        dialogBackgroundColor: _darkColorScheme.background,
-        dialogTheme: DialogThemeData(
-          backgroundColor: _darkColorScheme.background,
-          shape: getDialogShape(),
+        focusedBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+          borderSide: BorderSide(color: AdwaitaColors.blueAccent),
         ),
-        textTheme: getTextTheme(Brightness.dark),
-        indicatorColor: _darkColorScheme.secondary,
-        applyElevationOverlayColor: true,
-        buttonTheme: _buttonThemeData,
-        textButtonTheme: _darkTextButtonThemeData,
-        elevatedButtonTheme: _getElevatedButtonThemeData(Brightness.dark),
-        outlinedButtonTheme: _darkOutlinedButtonThemeData,
-        switchTheme: _switchStyleDark,
-        checkboxTheme: _checkStyleDark,
-        radioTheme: _radioStyleDark,
-        primaryColorDark: AdwaitaColors.blueAccent,
-        appBarTheme: _appBarDarkTheme,
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: AdwaitaColors.blueAccent,
-        ),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          selectedItemColor: _darkColorScheme.primary,
-          unselectedItemColor: AdwaitaColors.warmGrey.shade300,
-        ),
-        inputDecorationTheme: InputDecorationTheme(
-          filled: true,
-          fillColor: AdwaitaColors.darkButton,
-          enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(8)),
-            borderSide: BorderSide(color: Colors.transparent),
-          ),
-          focusedBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(8),
-            ),
-            borderSide: BorderSide(color: AdwaitaColors.blueAccent),
-          ),
-        ),
-        bottomAppBarTheme: BottomAppBarTheme(color: _darkColorScheme.surface),
-        colorScheme: _darkColorScheme
-            .copyWith(background: _darkColorScheme.background)
-            .copyWith(error: _darkColorScheme.error),
-      );
+      ),
+      bottomAppBarTheme: BottomAppBarThemeData(color: _darkColorScheme.surface),
+      colorScheme: _darkColorScheme
+          .copyWith(background: _darkColorScheme.background)
+          .copyWith(error: _darkColorScheme.error),
+    );
+
+    final overrides = Typography.material2021().copyWith(
+      englishLike: _applyFontFeaturesToTextTheme(
+        Typography.material2021().englishLike,
+        'Inter',
+        _interFontFeatures,
+      ),
+      dense: _applyFontFeaturesToTextTheme(
+        Typography.material2021().dense,
+        'Inter',
+        _interFontFeatures,
+      ),
+      tall: _applyFontFeaturesToTextTheme(
+        Typography.material2021().tall,
+        'Inter',
+        _interFontFeatures,
+      ),
+    );
+
+    return base.copyWith(
+      typography: overrides,
+    );
+  }
 
   // Special casing some widgets to get the desired Adwaita look
   // Buttons
@@ -220,9 +286,7 @@ class AdwaitaThemeData {
   );
 
   static final _buttonThemeData = ButtonThemeData(
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(4),
-    ),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
   );
 
   static final _outlinedButtonThemeData = OutlinedButtonThemeData(
@@ -279,7 +343,7 @@ class AdwaitaThemeData {
     return ElevatedButtonThemeData(style: _darkCommonButtonStyle);
   }
 
-// Switches
+  // Switches
   static Color _getSwitchThumbColorDark(Set<MaterialState> states) {
     if (states.contains(MaterialState.disabled)) {
       return AdwaitaColors.dark2;
@@ -338,7 +402,7 @@ class AdwaitaThemeData {
     trackColor: MaterialStateProperty.resolveWith(_getSwitchTrackColorLight),
   );
 
-// Checks
+  // Checks
   static Color _getCheckFillColorDark(Set<MaterialState> states) {
     if (!states.contains(MaterialState.disabled)) {
       if (states.contains(MaterialState.selected)) {
@@ -357,9 +421,7 @@ class AdwaitaThemeData {
   }
 
   static final _checkStyleDark = CheckboxThemeData(
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(2),
-    ),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2)),
     fillColor: MaterialStateProperty.resolveWith(_getCheckFillColorDark),
     checkColor: MaterialStateProperty.resolveWith(_getCheckColorDark),
   );
@@ -382,14 +444,12 @@ class AdwaitaThemeData {
   }
 
   static final _checkStyleLight = CheckboxThemeData(
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(2),
-    ),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2)),
     fillColor: MaterialStateProperty.resolveWith(_getCheckFillColorLight),
     checkColor: MaterialStateProperty.resolveWith(_getCheckColorLight),
   );
 
-// Radios
+  // Radios
   static final _radioStyleDark = RadioThemeData(
     fillColor: MaterialStateProperty.resolveWith(_getCheckFillColorDark),
   );
@@ -415,4 +475,88 @@ class AdwaitaThemeData {
     backgroundColor: AdwaitaColors.darkHeaderBarBackground,
     foregroundColor: AdwaitaColors.darkHeaderBarForeground,
   );
+
+  static TextTheme _applyFontFeaturesToTextTheme(
+    TextTheme baseTheme,
+    String fontFamily,
+    List<FontFeature> fontFeatures,
+  ) {
+    return baseTheme.apply(fontFamily: fontFamily).copyWith(
+          displayLarge: baseTheme.displayLarge?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          displayMedium: baseTheme.displayMedium?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          displaySmall: baseTheme.displaySmall?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          headlineLarge: baseTheme.headlineLarge?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          headlineMedium: baseTheme.headlineMedium?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          headlineSmall: baseTheme.headlineSmall?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          titleLarge: baseTheme.titleLarge?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          titleMedium: baseTheme.titleMedium?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          titleSmall: baseTheme.titleSmall?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          bodyLarge: baseTheme.bodyLarge?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          bodyMedium: baseTheme.bodyMedium?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          bodySmall: baseTheme.bodySmall?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          labelLarge: baseTheme.labelLarge?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          labelMedium: baseTheme.labelMedium?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+          labelSmall: baseTheme.labelSmall?.copyWith(
+                fontFamily: fontFamily,
+                fontFeatures: fontFeatures,
+              ) ??
+              TextStyle(fontFamily: fontFamily, fontFeatures: fontFeatures),
+        );
+  }
 }
